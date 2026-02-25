@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escape The Tsunami for Cars · Roblox Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-soft: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-soft: #8b949e;
+      --accent: #2f81f7;
+      --accent-soft: #1f6feb;
+      --radius: 6px;
+      --shadow-soft: 0 8px 24px rgba(1, 4, 9, 0.6);
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.5;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAVBAR */
+    .navbar {
+      background: #010409;
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: white;
+    }
+
+    .nav-title { font-size: 15px; font-weight: 600; }
+
+    /* LAYOUT */
+    .page {
+      max-width: 1100px;
+      margin: 24px auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .page { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 16px;
+    }
+
+    .card-title { font-size: 18px; font-weight: 600; }
+    .card-subtitle { font-size: 13px; color: var(--text-soft); }
+
+    /* THUMBNAIL */
+    .game-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #1f6feb, #3fb950);
+      border: 1px solid var(--border);
+      margin-bottom: 10px;
+    }
+
+    .pill {
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    footer {
+      max-width: 1100px;
+      margin: 24px auto;
+      padding: 0 16px;
+      font-size: 12px;
+      color: var(--text-soft);
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">R</div>
+  <div class="nav-title">Roblox Game Hub</div>
+  <a href="#game">Game</a>
+  <a href="#updates">Updates</a>
+  <a href="#about">About</a>
+</header>
+
+<main class="page">
+
+  <!-- MAIN CONTENT -->
+  <section>
+
+    <!-- GAME HEADER -->
+    <div class="card" id="game">
+      <div class="card-title">Escape The Tsunami for Cars</div>
+
+      <div class="card-subtitle">
+        A Roblox challenge where you pick up a car, carry it back to the white line,
+        and try not to get wiped out by a massive incoming wave.
+      </div>
+
+      <div class="game-thumb"></div>
+
+      <p class="card-subtitle">
+        ⭐ Favorites: <b>—</b><br>
+        👥 Visits: <b>—</b><br>
+        🕒 Updated: <b>—</b>
+      </p>
+
+      <br>
+
+      <a class="pill" href="https://www.roblox.com/games/88331737236047/Escape-The-Tsunami-for-Cars">
+        Open on Roblox →
+      </a>
+    </div>
+
+    <!-- CHANGELOG -->
+    <div class="card" id="updates">
+      <div class="card-title">Changelog</div>
+      <div class="card-subtitle">Latest updates to the game.</div>
+
+      <ul style="margin-top:10px; list-style:none;">
+        <li style="padding:8px 0; border-top:1px solid var(--border);">
+          <span class="pill">feature</span>
+          Improved car pickup detection for smoother grabbing.
+        </li>
+        <li style="padding:8px 0; border-top:1px solid var(--border);">
+          <span class="pill">fix</span>
+          Fixed physics issues when carrying cars near the wave.
+        </li>
+        <li style="padding:8px 0; border-top:1px solid var(--border);">
+          <span class="pill">balance</span>
+          Adjusted wave timing to make returning to the white line more intense.
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="card" id="about">
+      <div class="card-title">About This Game</div>
+      <p class="card-subtitle">
+        Escape The Tsunami for Cars is a unique Roblox challenge where players must
+        grab a car, carry it all the way back to the white line, and survive a deadly
+        tsunami rushing toward them.
+      </p>
+
+      <br>
+
+      <div class="card-title" style="font-size:14px;">Links</div>
+      <ul class="card-subtitle" style="list-style:none; margin-top:6px;">
+        <li><a href="https://www.roblox.com/games/88331737236047/Escape-The-Tsunami-for-Cars">Game Page</a></li>
+      </ul>
+    </div>
+  </aside>
+
+</main>
+
+<footer>
+  <span>© 2026 YourName</span>
+  <span>GitHub‑style Roblox website</span>
+</footer>
+
+</body>
+</html>
